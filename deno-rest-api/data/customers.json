@@ -1,0 +1,24 @@
+[
+  {
+    "customer_id": 2,
+    "email": "test456@gmail.com",
+    "password": "$2a$08$xPDxl8b.mXtlroc21MCsT.JzitIwkUiEL1zIXE.6UjrTCuI309ieC",
+    "phone": "+77007007070",
+    "lastName": "Шпак",
+    "firstName": "Антон",
+    "middleName": "Семёнович",
+    "createdAt": "2022-12-30T10:43:10.265Z",
+    "updatedAt": ""
+  },
+  {
+    "customer_id": 1,
+    "email": "test@gmail.com",
+    "password": "$2a$08$xPDxl8b.mXtlroc21MCsT.JzitIwkUiEL1zIXE.6UjrTCuI309ieC",
+    "phone": "+78008008080",
+    "lastName": "Горбунков",
+    "firstName": "Семён",
+    "middleName": "Семёнович",
+    "createdAt": "",
+    "updatedAt": "2023-01-09T18:05:12.707Z"
+  }
+]
