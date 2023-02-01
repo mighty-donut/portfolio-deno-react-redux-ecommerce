@@ -1,35 +1,3 @@
-// https://www.sitepen.com/blog/advanced-typescript-concepts-classes-and-types
-
-
-// source JSON
-// psaaword: test
-// [
-//   {
-//     "customer_id": 1,
-//     "email": "test@gmail.com",
-//     "password": "$2a$08$xPDxl8b.mXtlroc21MCsT.JzitIwkUiEL1zIXE.6UjrTCuI309ieC",
-//     "phone": "+78008008080",
-//     "lastName": "Горбунков",
-//     "firstName": "Семён",
-//     "middleName": "Семёнович",
-//     "createdAt": "",
-//     "updatedAt": ""
-//   },
-//   {
-//     "customer_id": 2,
-//     "email": "test456@gmail.com",
-//     "password": "$2a$08$xPDxl8b.mXtlroc21MCsT.JzitIwkUiEL1zIXE.6UjrTCuI309ieC",
-//     "phone": "+77007007070",
-//     "lastName": "Шпак",
-//     "firstName": "Антон",
-//     "middleName": "Семёнович",
-//     "createdAt": "",
-//     "updatedAt": ""
-//   }
-// ]
-
-
-
 export type Item = {
   id: number;
   quantity: number;
@@ -111,14 +79,14 @@ export type Customer = {
   updatedAt: Date;
 };
 
-// пилить
+// ?
 export type Address = {
   city: string;
   street: string;
 };
 
 
-// пилить 
+// ?
 export type OrderType = {
   order_id: number;
   customer_id: number;

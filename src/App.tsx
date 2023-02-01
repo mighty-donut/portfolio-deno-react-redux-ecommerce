@@ -3,6 +3,12 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import MainLayout from "./layouts/MainLayout";
 import ProfileLayout from "./layouts/ProfileLayout";
 
+import PrivateRoute from "./components/PrivateRoute";
+import Customer from "./pages/profile/Customer";
+import MyOrders from "./pages/profile/MyOrders";
+import MyReviews from "./pages/profile/MyReviews";
+import Favorites from "./pages/profile/Favorites";
+
 import Home from "./pages/Home";
 import Shops from "./pages/Shops";
 import Payment from "./pages/Payment";
@@ -12,11 +18,8 @@ import Contacts from "./pages/Contacts";
 import About from "./pages/About";
 import SignIn from "./pages/SignIn";
 
-import PrivateRoute from "./components/PrivateRoute";
-import Customer from "./pages/profile/Customer";
-import MyOrders from "./pages/profile/MyOrders";
-import MyReviews from "./pages/profile/MyReviews";
-import Favorites from "./pages/profile/Favorites";
+import Cart from "./pages/Cart";
+import Products from "./pages/Products";
 
 export default function App() {
   return (
@@ -30,6 +33,8 @@ export default function App() {
         <Route path="contacts" element={<Contacts />} />
         <Route path="about" element={<About />} />
         <Route path="signin" element={<SignIn />} />
+
+        <Route path="cart" element={<Cart />} />
       </Route>
 
       <Route element={<PrivateRoute />}>
@@ -39,6 +44,10 @@ export default function App() {
           <Route path="myreviews" element={<MyReviews />} />
           <Route path="favorites" element={<Favorites />} />
         </Route>
+      </Route>
+
+      <Route path="products">
+        <Route index element={<Products />} />
       </Route>
 
       {/* 404 ? */}

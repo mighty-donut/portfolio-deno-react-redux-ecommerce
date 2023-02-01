@@ -8,6 +8,13 @@ import {SignUp, SignIn, SignOut} from "./controllers/auth.ts"
 import { getProfile, updateProfile } from "./controllers/users.ts"
 
 
+import {
+  getAll,
+  getOneById,
+  getWithSearchParams,
+} from "./controllers/products.ts";
+
+
 const router = new Router();
 
 // http://localhost:8000/
@@ -32,5 +39,10 @@ router.post("/api/v1/auth/signout", authenticate, SignOut);
 // customer profile
 router.get("/api/v1/customers/get", authenticate, getProfile);
 router.put("/api/v1/customers/update", authenticate, updateProfile);
+
+// products
+router.get("/api/v1/products", getAll);
+router.get("/api/v1/products/:id", getOneById);
+router.get("/api/v1/search/product", getWithSearchParams);
 
 export default router;
