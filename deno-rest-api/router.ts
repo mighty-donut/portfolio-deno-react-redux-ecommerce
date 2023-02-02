@@ -2,6 +2,7 @@ import { Router, RouterContext } from "https://deno.land/x/oak@v11.1.0/mod.ts";
 
 // middleware
 import { authenticate } from "./middleware/authenticate.ts"
+import { serveStatic } from "./middleware/static.ts";
 
 import {SignUp, SignIn, SignOut} from "./controllers/auth.ts"
 
@@ -30,6 +31,11 @@ router.get("/", (ctx: RouterContext) => {
     </html>
   `;
 });
+
+// serve static content
+// example
+// http://localhost:8000/images/category/bookshelfSpeakers.jpg
+router.get("/images/:path+", serveStatic)
 
 // auth
 router.post("/api/v1/auth/signup", SignUp);
